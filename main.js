@@ -9,8 +9,6 @@ app.use(express.json());
 
 mongoose.connect(url).then(() => console.log("Connect to  mongoDB"));
 
-// Define the routes and implement the CRUD operations for the books collection
-
 app.post("/book", async (req, res) => {
   try {
     const { title, author, publicationYear } = req.body;
